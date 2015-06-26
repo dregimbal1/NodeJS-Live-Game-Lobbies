@@ -1,0 +1,22 @@
+<template name="manageDialog">
+  <div class="mask"> </div>
+  <div class="modal">
+    <div class="modal-header">
+      <button type="button" class="close done">&times;</button>
+      <h3>Manage {{user.profile.user}}</h3>
+    </div>
+
+    <div class="modal-body">
+      <div class="well well-small">
+		  Gamertag: {{user.profile.gamertag}} | PSN: {{user.profile.psn}}
+	  </div>
+	  <div>
+		  <input type="button" value="Kick" class="btn btn-small kick">
+	  </div>
+    </div>
+
+    <div class="modal-footer">
+      <a href="#" class="btn btn-primary done">Done</a>
+    </div>
+  </div>
+</template>

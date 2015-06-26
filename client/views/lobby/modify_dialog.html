@@ -1,0 +1,81 @@
+<template name="modifyDialog">
+  <div class="mask"> </div>
+  <div class="modal">
+    <div class="modal-header">
+      <button type="button" class="close done">&times;</button>
+      <h3>Modify your Lobby</h3>
+    </div>
+
+    <div class="modal-body">
+         <form id="modify-form" action="action">
+           <div>
+			
+  		    <div class="form-group">
+  		      <label for="lobby-title">Title</label>
+  		      <input type="text" class="form-control" id="lobby-title" value="{{title}}" placeholder="">
+  		    </div>
+			
+  		    <div class="form-group">
+  		      <label for="lobby-description">Description</label>
+  		      <textarea id="lobby-description">{{description}}</textarea>
+  		    </div>
+			
+  		    <div class="form-group">
+  		      <label for="lobby-game">Game</label>
+  			  <select id="lobby-game" selected="{{game}}">
+  		      	<option value="Destiny">Destiny</option>
+  				<option value="HaloMCC">Halo: Master Chief Collection</option>
+  				<option value="Halo3">Halo 3</option>
+  				<option value="Halo4">Halo 4</option>
+  			  </select>
+  		    </div>
+			
+  		    <div class="form-group">
+  		      <label for="lobby-type">Game Type</label>
+  		      <input type="text" class="form-control" id="lobby-type" value="{{type}}" placeholder="">
+  		    </div>
+			
+  		    <div class="form-group">
+  		      	<label for="lobby-console">Console</label>
+  				<select id="lobby-console" selected="{{party.console}}">
+  					<option value="XB1">Xbox One</option>
+  					<option value="XB360">Xbox 360</option>
+  					<option value="PS4">Playstation 4</option>
+  				</select>
+  		    </div>
+			
+  		    <div class="form-group">
+  		      <label for="lobby-start">Start Time</label>
+  			  <small><i>Cannot modify Start Time</i></small><br>
+  		      <input type="time" class="form-control" id="lobby-start" value="{{start}}">
+  		    </div>
+			
+  		    <div class="form-group">
+  		      <label for="lobby-end">End Time</label>
+  		      <input type="time" class="form-control" id="lobby-end" value="{{end}}">
+  		    </div>
+			
+  		    <div class="form-group">
+  		      <label for="lobby-size">Lobby Size</label>
+  		      <input type="text" class="form-control" id="lobby-size" value="{{size}}">
+  		    </div>
+	
+  		    <div class="form-group">
+  		      <label for="lobby-invite">Invite Only</label>
+  			  <div class="checkbox">
+  			    <label>
+  			      <input type="checkbox" class="form-control" id="lobby-invite" value="{{invite}}">
+  			    </label>
+  			  </div>
+  		    </div>
+  			<br>
+          </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+	  <input type="button" class="btn btn-primary modify" value="Update" />
+      <a href="#" class="btn btn-default done">Close</a>
+    </div>
+  </div>
+</template>

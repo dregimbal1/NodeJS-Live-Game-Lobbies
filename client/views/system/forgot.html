@@ -1,0 +1,26 @@
+<template name="forgot">
+
+	<h1>Darn! This happens to the best of us.</h1>
+    <div class="row-fluid">
+
+	  {{#if resetPassword}}
+	     <form id="new-password" action="action">
+	        <div>
+	           <input type="text" id="new-password-password" />
+	           <input type="submit" value="Change Password" />
+	        </div>
+	      </form>
+	  {{else}}
+	      <form id="recovery-form" action="action">
+	        <div>
+	           <input type="text" id="recovery-email" />              
+	           <input type="submit" value="Send Reset Instructions" />
+	         </div>
+	      </form>
+		  Feeling lucky? <a href="/">Sign in again here!</a>
+	  {{/if}}
+    </div>
+  
+</template>
+
+

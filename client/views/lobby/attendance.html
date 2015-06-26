@@ -1,0 +1,59 @@
+<template name="attendance">
+  <div class="attendance well well-small">
+    <div class="muted who"><b>Current Players</b></div>
+	
+	{{#unless isPartyLeader}}
+	
+		{{#if inLobby}}
+			<input type="button" value="Leave Game" class="btn btn-small leave">
+		{{/if}}
+		
+		{{#unless inLobby}}
+			<input type="button" value="Join Game" class="btn btn-small join">
+		{{/unless}}
+		
+	{{/unless}}
+	<!--
+    {{#if public}}
+      <div>
+        <b>Current Players:</b>
+        <span class="label label-inverse pull-right">Invited</span>
+      </div>
+    {{/if}}
+	-->
+
+    {{#each rsvps}}
+      <div>
+		{{#if isPartyLeader}}
+			<span class="label {{onlineStatus}} manage">{{playerName}}</span>
+		{{else}}	
+			<span class="label {{onlineStatus}}">{{playerName}}</span>
+		{{/if}}
+		
+	  </div>
+	{{else}}
+	  <div>
+		  Get some friends to join.
+      </div>
+    {{/each}}
+	
+
+
+    {{#unless public}}
+      {{#each outstandingInvitations}}
+        <div>
+          {{invitationName}}
+          <span class="label label-inverse pull-right">Invited</span>
+        </div>
+      {{/each}}
+    {{/unless}}
+
+
+
+    {{#if canInvite}}
+      <div class="invite">
+        <a href="#" class="btn btn-mini invite">Invite people</a>
+      </div>
+    {{/if}}
+  </div>
+</template>

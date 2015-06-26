@@ -1,0 +1,61 @@
+<template name="lobbies">
+	
+	<div class="row-fluid">
+		
+    {{#if showKickedDialog}}
+      {{> kickedDialog}}
+    {{/if}}
+		
+	{{#unless inLobby}}
+		<div style="margin:15px;">
+			<input type="button" value="Create Lobby" class="btn btn-small createLobby">
+		</div>
+	{{/unless}}
+	
+	
+	<!-- {{> reactiveTable collection=parties settings=settings}} -->
+	
+	
+
+	<table class="table">
+		<thead>
+			<th>Title</th>
+			<th>Game</th>
+			<th>Type</th>
+			<th>Size</th>
+			<th>Start</th>
+			<th>End</th>
+			<th>Host</th>
+			<th></th>
+		</thead>
+		<tbody>
+		{{#each parties}}
+		<tr>
+			{{#if isPublic _id}}
+				<td>{{title}}</td>
+			{{else}}
+				<td>{{title}} <br><small>Invite Only</small></td>
+			{{/if}}
+			<td>{{game}}</td>
+			<td>{{type}}</td>
+			{{#unless isFull}}
+			<td>{{playercount}} / {{size}}</td>
+			{{else}}
+			<td style="color:#FF0000;">{{playercount}} / {{size}}</td>
+			{{/unless}}
+			<td>{{start}}</td>
+			<td>{{end}}</td>
+			<td>{{owner_name}}</td>
+			<td><input type="button" value="Join" class="btn btn-small join"></td>
+		</tr>
+		{{/each}}
+		</tbody>
+	</table>	
+
+		
+	{{> usersOnline}}
+	
+		
+	</div>
+  
+</template>

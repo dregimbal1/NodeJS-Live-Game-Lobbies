@@ -1,0 +1,8 @@
+	<template name="usersOnline">
+		<div class="well well-small">
+			<div class="muted who"><b>Online Users</b></div>
+			{{#each usersOnline}}
+		    	<span class="label {{labelClass}}">{{profile.user}}</span>
+			{{/each}}
+		</div>
+	</template>	

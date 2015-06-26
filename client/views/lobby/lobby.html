@@ -1,0 +1,52 @@
+<template name="lobby">
+	
+    {{#if showManageDialog}}
+      {{> manageDialog}}
+    {{/if}}
+	
+    {{#if showModifyDialog}}
+      {{> modifyDialog}}
+    {{/if}}
+	
+	<div class="row-fluid">
+		
+		<div class="span8">
+			
+	 	   <div class="page-header">
+	 	     <h1>{{title}} <small>Host: {{owner_name}} ({{hostConsoleID owner_id console}})</small></h1>
+	 	   </div>
+		   <div class="lobby-details">
+		   		<small>Status: {{getStatus public}} | Console: {{console}} | Game: {{game}} | Game Type: {{type}} | Party: {{playercount}} / {{size}}</small>
+	   	   </div>
+		   
+		<p>Start Time: {{start}}</p>
+	
+		<p>End Time: {{end}}</p>
+		   
+		   <p>{{description}}</p>
+			
+			
+			{{> chat}}
+		
+			{{#if isPartyLeader}}
+				<div class="well well-small">
+					<div class="muted who"><strong>You are party leader</strong></div>
+			
+					<input type="button" value="Delete Lobby" class="btn btn-small closeLobby">
+					<input type="button" value="Settings" class="btn btn-small modifyLobby">
+				</div>
+			{{/if}}
+			
+		</div>
+		
+		<div class="span4">
+		
+			
+			{{> attendance context}}
+		
+		</div>
+		
+		
+	</div>
+  
+</template>

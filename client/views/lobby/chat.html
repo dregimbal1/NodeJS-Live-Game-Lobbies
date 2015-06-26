@@ -1,0 +1,39 @@
+<template name="chat">
+
+
+        {{#if currentUser}}
+ 
+            <div class="well">
+
+				<div style="height:200px;">
+                {{> messages}}
+				</div>
+				
+				<div style="margin-top:40px;">
+				{{> input}}
+				</div>
+				
+			</div>
+       
+        {{/if}}
+
+    
+</template>
+
+<template name="messages">
+    <h4>Chat</h4>
+    <div id="messages" style="background-color: #ffffff; border: 1px solid darkgray; max-height: 200px; overflow: auto">
+        {{#each messages}}
+            {{> message}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="input">
+    <input type="text" id="msg" placeholder="Say something..." style="width: 50%; margin-bottom: 0px">
+    <input type="button" value="Send message" class="btn btn-primary sendMsg">
+</template>
+
+<template name="message">
+    <p><strong>{{user}}</strong> <span style="font-size: 0.7em; color: darkgray">({{timestamp}})</span>: <i>{{msg}}</i></p>
+</template>

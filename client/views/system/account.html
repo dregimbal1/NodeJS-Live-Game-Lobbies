@@ -1,0 +1,60 @@
+<template name="account">
+
+    <div class="row-fluid">
+	
+ 	   <div class="page-header">
+ 	     <h1>Account Settings <small>Check yo self</small></h1>
+ 	   </div>
+		
+	   <div class="alert alert-info" role="alert">
+	     <p class="alert-link">You do not have the ability to change your username.</p>
+	   </div>
+		
+       <form id="account-form" action="action">
+         <div>
+			
+		    <div class="form-group">
+		      <label for="account-username">Username</label>
+		      <input type="text" class="form-control" id="account-username" disabled value="{{currentUser.username}}">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="account-email">Email Address</label>
+		      <input type="email" class="form-control" id="account-email" value="{{email}}">
+		    </div>
+			
+			<div class="form-group">
+		      <label for="account-gamertag">Gamertag</label>
+		      <input type="text" class="form-control" id="account-gamertag" value="{{currentUser.profile.gamertag}}">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="account-psn">Playstation Network ID (PSN)</label>
+		      <input type="text" class="form-control" id="account-psn" value="{{currentUser.profile.psn}}">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="account-newpassword">New Password</label>
+		      <input type="password" class="form-control" id="account-newpassword">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="account-newcpassword">Confirm New Password</label>
+		      <input type="password" class="form-control" id="account-newcpassword">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="account-password">Current Password</label>
+		      <input type="password" class="form-control" id="account-password">
+		    </div>
+
+
+			<input type="submit" class="btn btn-default" id="update" value="Update" />
+        </div>
+      </form>
+
+    </div>
+  
+</template>
+
+

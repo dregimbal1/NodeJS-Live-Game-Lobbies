@@ -1,0 +1,19 @@
+<template name="layout">
+  <head>
+	  <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+  </head>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class='brand' href='/'>Live Game Lobbies</a>
+        <div class="nav pull-right">
+          {{> loginButtons}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    {{>yield}}
+  </div>
+</template>

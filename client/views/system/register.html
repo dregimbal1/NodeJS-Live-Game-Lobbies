@@ -1,0 +1,53 @@
+<template name="register">
+
+    <div class="row-fluid">
+		
+  	   <div class="page-header">
+  	     <h1>Register an Account <small>The first thing you did right all day.</small></h1>
+  	   </div>
+		
+       <form id="register-form" action="action">
+         <div>
+			
+		    <div class="form-group">
+		      <label for="register-username">Username</label>
+		      <input type="text" class="form-control" id="register-username">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="register-email">Email</label>
+		      <input type="email" class="form-control" id="register-email">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="register-password">Password</label>
+		      <input type="password" class="form-control" id="register-password">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="register-cpassword">Confirm Password</label>
+		      <input type="password" class="form-control" id="register-cpassword">
+		    </div>
+			<br>
+		    <div class="form-group">
+		      <label for="register-gamertag">Gamertag</label>
+		      <input type="text" class="form-control" id="register-gamertag">
+			  <p class="help-block">Xbox (any generation)</p>
+		    </div>
+			<br>
+		    <div class="form-group">
+		      <label for="register-psn">Playstation Network ID (PSN)</label>
+		      <input type="text" class="form-control" id="register-psn">
+			  <p class="help-block">Playstation (any generation)</p>
+		    </div>
+			<br>
+			<input type="submit" class="btn btn-default" id="register-button" value="Sign up!" />
+        </div>
+
+      </form>
+	  <p>Already have an account? <a href="/">Sign in here!</a></p>
+    </div>
+  
+</template>
+
+

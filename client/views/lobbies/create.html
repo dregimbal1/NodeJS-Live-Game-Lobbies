@@ -1,0 +1,87 @@
+<template name="create">
+
+    <div class="row-fluid">
+		
+	   <div class="page-header">
+	     <h1>Create a Lobby <small>Prepare for Battle!</small></h1>
+	   </div>
+	   
+	   <div class="alert alert-info" role="alert">
+	     <p class="alert-link">Your lobby will remain active for as long as there is an assigned leader.</p>
+	   </div>
+	   
+       <form id="create-form" action="action">
+         <div>
+			
+		    <div class="form-group">
+		      <label for="lobby-title">Title</label>
+			  <small>Be as descriptive as possible - remember, you're selling yourself.</small><br>
+		      <input type="text" class="form-control" id="lobby-title" placeholder="">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="lobby-description">Description</label>
+			  <small>HTML is welcome. We'll laugh if you try anything else.</small><br>
+		      <textarea id="lobby-description"></textarea>
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="lobby-game">Game</label>
+			  <select id="lobby-game">
+		      	<option value="Destiny">Destiny</option>
+				<option value="HaloMCC">Halo: Master Chief Collection</option>
+				<option value="Halo3">Halo 3</option>
+				<option value="Halo4">Halo 4</option>
+			  </select>
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="lobby-type">Game Type</label>
+			  <small>3v3, Big Team Battle, Free Roam?</small><br>
+		      <input type="text" class="form-control" id="lobby-type" placeholder="">
+		    </div>
+			
+		    <div class="form-group">
+		      	<label for="lobby-console">Console</label>
+				<select id="lobby-console">
+					<option value="XB1">Xbox One</option>
+					<option value="XB360">Xbox 360</option>
+					<option value="PS4">Playstation 4</option>
+				</select>
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="lobby-start">Start Time</label>
+			  <small>Let others know when you plan to meetup in-game</small><br>
+		      <input type="time" class="form-control" id="lobby-start">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="lobby-end">End Time</label>
+			  <small>How long do you predict you'll be playig?</small><br>
+		      <input type="time" class="form-control" id="lobby-end">
+		    </div>
+			
+		    <div class="form-group">
+		      <label for="lobby-size">Lobby Size</label>
+			  <small>This is the cut off limit. You can kick scrubs later.</small><br>
+		      <input type="text" class="form-control" id="lobby-size">
+		    </div>
+	
+		    <div class="form-group">
+		      <label for="lobby-invite">Invite Only</label>
+			  <small>Send invites in your closed lobby. This can be changed later.</small><br>
+			  <div class="checkbox">
+			    <label>
+			      <input type="checkbox" class="form-control" id="lobby-invite">
+			    </label>
+			  </div>
+		    </div>
+			<br>
+			<input type="submit" class="btn btn-default" id="create" value="Create Lobby" />
+        </div>
+      </form>
+	  <p>Leadership is not your thing? Try <i><a href="/lobbies">joining a lobby!</a></i></p>
+    </div>
+  
+</template>

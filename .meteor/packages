@@ -1,0 +1,18 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+bootstrap
+http
+accounts-password
+insecure
+service-configuration
+standard-app-packages
+iron:router
+accounts-base
+user-session
+mizzao:user-status
+simple:reactive-method
+aslagle:reactive-table
