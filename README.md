@@ -19,7 +19,7 @@ Some current features:
 
 
 ### Dependencies
-You will need to following packages to run this project -- or, just throw this ZIP file into a folder and do:
+You will need the following packages to run this project -- or, just throw this ZIP file into a folder and do:
 
 
 ```sh
@@ -46,6 +46,7 @@ $ npm install
   
 License
 ----
+MIT
 Free do whatever you want. If you want to be awesome help out and contribute to the project / star. Thanks!
 
 
